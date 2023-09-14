@@ -1,7 +1,13 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
-import { isRouteErrorResponse, useRouteError } from "react-router-dom";
+import { Box, Button, Heading, Text } from "@chakra-ui/react";
+import {
+  isRouteErrorResponse,
+  useNavigate,
+  useRouteError,
+} from "react-router-dom";
+import { MdHome } from "react-icons/md";
 
 const ErrorPage = () => {
+  const navigate = useNavigate();
   const error = useRouteError();
   return (
     <>
@@ -12,6 +18,9 @@ const ErrorPage = () => {
             ? "This page does not exist."
             : "An unexpected error occurred."}
         </Text>
+        <Button leftIcon={<MdHome />} onClick={() => navigate("/")}>
+          Return home
+        </Button>
       </Box>
     </>
   );

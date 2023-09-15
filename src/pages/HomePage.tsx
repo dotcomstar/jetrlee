@@ -1,5 +1,4 @@
-import { Grid, GridItem, HStack, Icon, Link, Show } from "@chakra-ui/react";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { Grid, GridItem, Show } from "@chakra-ui/react";
 import SocialsIcons from "../components/SocialsIcons";
 
 const HomePage = () => {

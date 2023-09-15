@@ -26,7 +26,7 @@ const SocialsIcons = () => {
     <HStack>
       {data.map((social) => (
         <Link href={social.url} isExternal key={social.slug}>
-          <Icon as={iconMap[social.slug]} boxSize={6} />
+          <Icon as={iconMap[social.slug]} boxSize={6} color={"gray.500"} />
         </Link>
       ))}
     </HStack>

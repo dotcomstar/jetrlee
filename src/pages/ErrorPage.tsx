@@ -13,7 +13,7 @@ const ErrorPage = () => {
   return (
     <>
       <NavBar />
-      <Box padding={5}>
+      <Box px={{ base: 3, md: 5 }} py={{ base: "60px" }} as="body">
         <Heading>Oops...</Heading>
         <Text>
           {isRouteErrorResponse(error)

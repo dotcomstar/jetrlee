@@ -8,8 +8,8 @@ const NavBar = () => {
     <Flex
       as="header"
       position="fixed"
-      backgroundColor="rgba(255, 
- 255, 255, 0.1)"
+      backgroundColor="rgba(100, 
+ 100, 255, 0.1)"
       backdropFilter="blur(2px)"
       w="100%"
       zIndex="200"

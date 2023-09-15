@@ -5,12 +5,14 @@ import {
   useRouteError,
 } from "react-router-dom";
 import { MdHome } from "react-icons/md";
+import NavBar from "../components/NavBar";
 
 const ErrorPage = () => {
   const navigate = useNavigate();
   const error = useRouteError();
   return (
     <>
+      <NavBar />
       <Box padding={5}>
         <Heading>Oops...</Heading>
         <Text>

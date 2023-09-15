@@ -4,13 +4,11 @@ import HeaderOverlay from "../components/HeaderOverlay";
 
 const HomePage = () => {
   return (
-    <Grid
-      templateAreas={{ base: `"main"` }}
-      templateColumns={{
-        base: "1fr",
-      }}
-    >
-      <GridItem area="main">
+    <Grid>
+      <GridItem>
+        <HeaderOverlay />
+        <HeaderOverlay />
+        <HeaderOverlay />
         <HeaderOverlay />
         <SocialsIcons />
       </GridItem>

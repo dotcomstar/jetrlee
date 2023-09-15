@@ -22,6 +22,9 @@ const NavBar = () => {
         <Link to="/projects">
           <Text>Projects</Text>
         </Link>
+        <Link to="/playlists">
+          <Text>Playlists</Text>
+        </Link>
         <ColorModeSwitch />
       </HStack>
     </Flex>

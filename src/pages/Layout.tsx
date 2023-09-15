@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <>
       <NavBar />
-      <Box px={{ base: 3, md: 5 }} py={{ base: "60px" }} as="body">
+      <Box px={{ base: 3, md: 5 }} py={{ base: "60px" }} as="main">
         <Outlet />
       </Box>
     </>

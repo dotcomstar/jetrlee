@@ -3,7 +3,7 @@ import jetPlanefield from "../assets/jet-planefield.jpg";
 
 const HeaderOverlay = () => {
   return (
-    <Container maxW={"-moz-max-content"} p={0}>
+    <Container maxW={"100vw"} p={0}>
       <Box
         position="relative"
         bgImage={jetPlanefield}

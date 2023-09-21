@@ -1,11 +1,4 @@
-import {
-  LinkBox,
-  Box,
-  Link,
-  Text,
-  Heading,
-  LinkOverlay,
-} from "@chakra-ui/react";
+import { Heading, LinkBox, LinkOverlay, Text } from "@chakra-ui/react";
 import usePlaylists from "../hooks/usePlaylists";
 
 export const PlaylistsPage = () => {

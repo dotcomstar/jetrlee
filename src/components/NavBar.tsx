@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import ColorModeSwitch from "./ColorModeSwitch";
 import { FaHome } from "react-icons/fa";
 
+export const navBarHeight = "60px";
+
 const NavBar = () => {
   return (
     <Flex
@@ -14,7 +16,7 @@ const NavBar = () => {
       w="100%"
       zIndex="200"
       justifyContent="center"
-      height="60px"
+      height={navBarHeight}
     >
       <HStack>
         <Link to="/">

@@ -1,4 +1,11 @@
-import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
+import {
+  LinkBox,
+  Box,
+  Link,
+  Text,
+  Heading,
+  LinkOverlay,
+} from "@chakra-ui/react";
 import usePlaylists from "../hooks/usePlaylists";
 
 export const PlaylistsPage = () => {
@@ -6,12 +13,24 @@ export const PlaylistsPage = () => {
   return (
     <>
       {data.map((playlist) => (
-        <Box key={playlist.title}>
-          <Link href={playlist.url} isExternal>
-            {playlist.title}
-          </Link>
+        <LinkBox
+          key={playlist.title}
+          borderWidth="1px"
+          rounded="md"
+          maxW="sm"
+          p="5"
+        >
+          <Heading size="md" my="2">
+            <LinkOverlay
+              href={playlist.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {playlist.title}
+            </LinkOverlay>
+          </Heading>
           <Text>{playlist.description}</Text>
-        </Box>
+        </LinkBox>
       ))}
     </>
   );

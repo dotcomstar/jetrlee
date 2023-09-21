@@ -1,7 +1,7 @@
-import { Flex, HStack, Image, Text } from "@chakra-ui/react";
+import { Flex, HStack, Icon, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import logo from "../assets/react.svg";
 import ColorModeSwitch from "./ColorModeSwitch";
+import { FaHome } from "react-icons/fa";
 
 const NavBar = () => {
   return (
@@ -14,10 +14,11 @@ const NavBar = () => {
       w="100%"
       zIndex="200"
       justifyContent="center"
+      height="60px"
     >
       <HStack>
         <Link to="/">
-          <Image maxWidth="none" src={logo} boxSize="60px" objectFit="fill" />
+          <Icon as={FaHome} maxWidth="none" boxSize="40px" objectFit="fill" />
         </Link>
         <Link to="/projects">
           <Text>Projects</Text>

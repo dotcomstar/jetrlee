@@ -8,6 +8,7 @@ const ColorModeSwitch = () => {
     <Icon
       as={colorMode === "dark" ? FaSun : FaMoon}
       onClick={toggleColorMode}
+      boxSize="20px"
     />
   );
 };

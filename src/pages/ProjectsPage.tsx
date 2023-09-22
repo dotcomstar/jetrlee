@@ -1,8 +1,10 @@
 import { Heading, LinkBox, LinkOverlay, Text, Image } from "@chakra-ui/react";
-import useProjects from "../hooks/useProjects";
+import useData from "../hooks/useData";
+import projects from "../data/projects";
+import Project from "../entities/Project";
 
 const ProjectsPage = () => {
-  const { data } = useProjects();
+  const { data } = useData<Project>(projects);
 
   return (
     <>

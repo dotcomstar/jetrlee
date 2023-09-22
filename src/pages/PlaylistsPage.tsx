@@ -1,8 +1,10 @@
 import { Heading, LinkBox, LinkOverlay, Text } from "@chakra-ui/react";
-import usePlaylists from "../hooks/usePlaylists";
+import useData from "../hooks/useData";
+import playlists from "../data/playlists";
+import Playlist from "../entities/Playlist";
 
 export const PlaylistsPage = () => {
-  const { data } = usePlaylists();
+  const { data } = useData<Playlist>(playlists);
   return (
     <>
       {data.map((playlist) => (

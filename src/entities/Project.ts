@@ -7,5 +7,5 @@ export default interface Project {
   url: string;
   startDate: string;
   endDate: string;
-  isCurrent: string;
+  isCurrent: boolean;
 }

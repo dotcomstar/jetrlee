@@ -7,11 +7,13 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
-import useSocials from "../hooks/useSocials";
 import { IconType } from "react-icons";
+import useData from "../hooks/useData";
+import socials from "../data/socials";
+import Social from "../entities/Social";
 
 const SocialsIcons = () => {
-  const { data } = useSocials();
+  const { data } = useData<Social>(socials);
 
   const iconMap: { [key: string]: IconType } = {
     github: FaGithub,

@@ -11,9 +11,10 @@ export const PlaylistsPage = () => {
           borderWidth="1px"
           rounded="md"
           maxW="sm"
-          p="5"
+          m="5"
+          bgColor="green"
         >
-          <Heading size="md" my="2">
+          <Heading size="md" mt="2" mx="2">
             <LinkOverlay
               href={playlist.url}
               target="_blank"
@@ -22,7 +23,9 @@ export const PlaylistsPage = () => {
               {playlist.title}
             </LinkOverlay>
           </Heading>
-          <Text>{playlist.description}</Text>
+          <Text mb="2" mx="2">
+            {playlist.description}
+          </Text>
         </LinkBox>
       ))}
     </>

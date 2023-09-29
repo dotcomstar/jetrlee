@@ -3,16 +3,17 @@ import jetPlanefield from "../assets/jet-planefield.jpg";
 
 const HeaderOverlay = () => {
   return (
-    <Container maxW={"100vw"} p={0}>
+    <Container maxW="100vw" p={0}>
       <Box
+        border="1px"
+        minHeight="800px"
         position="relative"
         bgImage={jetPlanefield}
         bgSize="cover"
-        bgPosition="center"
+        bgPosition="bottom right"
         bgRepeat="no-repeat"
         left={0}
         right={0}
-        maxWidth="100%"
       >
         <Box
           position="absolute"

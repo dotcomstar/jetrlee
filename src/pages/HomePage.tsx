@@ -7,9 +7,6 @@ const HomePage = () => {
     <Grid>
       <GridItem>
         <HeaderOverlay />
-        <HeaderOverlay />
-        <HeaderOverlay />
-        <HeaderOverlay />
         <SocialsIcons />
       </GridItem>
     </Grid>

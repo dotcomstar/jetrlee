@@ -5,7 +5,6 @@ const HeaderOverlay = () => {
   return (
     <Container maxW="100vw" p={0}>
       <Box
-        border="1px"
         minHeight="800px"
         position="relative"
         bgImage={jetPlanefield}

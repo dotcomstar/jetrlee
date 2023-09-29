@@ -2,6 +2,8 @@ import { Box, Center, Text } from "@chakra-ui/react";
 import jetPlanefield from "../assets/jet-planefield.jpg";
 
 const CloudText2 = () => {
+  const gaussianStdDev = 0;
+  const displacementScale = "30";
   return (
     <Box
       minHeight="800px"
@@ -44,31 +46,43 @@ const CloudText2 = () => {
               numOctaves="6"
               result="noise2"
             />
-            <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+            <feGaussianBlur in="SourceGraphic" stdDeviation={gaussianStdDev} />
             <feDisplacementMap
               in="blur1"
-              scale="30"
+              scale={displacementScale}
               in2="noise1"
               result="cloud1"
             />
-            <feFlood floodColor="rgb(215,215,215)" floodOpacity="0.1" />
+            <feFlood floodColor="rgb(215,215,215)" floodOpacity="0.3" />
             <feComposite operator="in" in2="SourceGraphic" />
-            <feOffset dx="-10" dy="-3" />
+            <feOffset dx="-2" dy="0" />
             <feMorphology radius="20" />
-            <feGaussianBlur stdDeviation="20" />
-            <feDisplacementMap scale="30" in2="noise1" result="cloud2" />
-            <feFlood floodColor="rgb(66,105,146)" floodOpacity="0.2" />
+            <feGaussianBlur stdDeviation={gaussianStdDev} />
+            <feDisplacementMap
+              scale={displacementScale}
+              in2="noise1"
+              result="cloud2"
+            />
+            <feFlood floodColor="rgb(66,105,146)" floodOpacity="1" />
             <feComposite operator="in" in2="SourceGraphic" />
-            <feOffset dx="-10" dy="40" />
+            <feOffset dx="-1" dy="6" />
             <feMorphology radius="0 40" />
-            <feGaussianBlur stdDeviation="20" />
-            <feDisplacementMap scale="30" in2="noise2" result="cloud3" />
-            <feFlood floodColor="rgb(0,0,0)" floodOpacity="0.4" />
+            <feGaussianBlur stdDeviation={gaussianStdDev} />
+            <feDisplacementMap
+              scale={displacementScale}
+              in2="noise2"
+              result="cloud3"
+            />
+            <feFlood floodColor="rgb(0,0,0)" floodOpacity="1" />
             <feComposite operator="in" in2="SourceGraphic" />
-            <feOffset dx="20" dy="60" />
+            <feOffset dx="3" dy="13" />
             <feMorphology radius="0 65" />
-            <feGaussianBlur stdDeviation="20" />
-            <feDisplacementMap scale="50" in2="noise2" result="cloud4" />
+            <feGaussianBlur stdDeviation={gaussianStdDev} />
+            <feDisplacementMap
+              scale={displacementScale}
+              in2="noise2"
+              result="cloud4"
+            />
             <feMerge>
               <feMergeNode in="cloud1" id="feMergeNode954" />
               <feMergeNode in="cloud2" id="feMergeNode956" />

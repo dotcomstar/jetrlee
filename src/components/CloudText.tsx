@@ -44,19 +44,19 @@ const CloudText = () => {
           <filter id="filter-mid">
             <feTurbulence
               type="fractalNoise"
-              baseFrequency="0.012"
-              numOctaves="2"
+              baseFrequency="0.05"
+              numOctaves="5"
             />
-            <feDisplacementMap in="SourceGraphic" scale="20" />
+            <feDisplacementMap in="SourceGraphic" scale="30" />
           </filter>
           {/* <!-- Front Layer --> */}
           <filter id="filter-front">
             <feTurbulence
               type="fractalNoise"
-              baseFrequency="0.012"
-              numOctaves="2"
+              baseFrequency="0.05"
+              numOctaves="5"
             />
-            <feDisplacementMap in="SourceGraphic" scale="10" />
+            <feDisplacementMap in="SourceGraphic" scale="30" />
           </filter>
         </svg>
         <Text
@@ -73,7 +73,7 @@ const CloudText = () => {
           as="b"
           fontSize={{ base: "4xl", md: "9xl" }}
           color="whiteAlpha.900"
-          textShadow="20px 210px 5px rgba(158, 168, 179, 0.5)"
+          textShadow="19px 204px 8px rgba(158, 168, 179, 0.15)"
           position="absolute"
           filter="url(#filter-middle)"
         >
@@ -83,7 +83,7 @@ const CloudText = () => {
           as="b"
           fontSize={{ base: "4xl", md: "9xl" }}
           color="whiteAlpha.900"
-          textShadow="20px 220px 5px rgba(0, 0, 0, 0.3)"
+          textShadow="18px 208px 10px rgba(0, 0, 0, 0.05)"
           position="absolute"
           filter="url(#filter-front)"
         >

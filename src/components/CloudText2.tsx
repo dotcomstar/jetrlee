@@ -73,10 +73,10 @@ const CloudText2 = () => {
               in2="noise2"
               result="cloud3"
             />
-            <feFlood floodColor="rgb(0,0,0)" floodOpacity="0.4" />
+            <feFlood floodColor="rgb(0,0,0)" floodOpacity="0.2" />
             <feComposite operator="in" in2="SourceGraphic" />
             <feOffset dx="5" dy="10" />
-            <feMorphology radius="7 15" />
+            <feMorphology radius="9 15" />
             <feGaussianBlur stdDeviation={gaussianStdDev} />
             <feDisplacementMap
               scale={displacementScale}

@@ -63,20 +63,20 @@ const CloudText2 = () => {
               in2="noise1"
               result="cloud2"
             />
-            <feFlood floodColor="rgb(66,105,146)" floodOpacity="1" />
+            <feFlood floodColor="rgb(66,105,146)" floodOpacity="0.2" />
             <feComposite operator="in" in2="SourceGraphic" />
-            <feOffset dx="-1" dy="6" />
-            <feMorphology radius="0 40" />
+            <feOffset dx="5" dy="10" />
+            <feMorphology radius="5 10 " />
             <feGaussianBlur stdDeviation={gaussianStdDev} />
             <feDisplacementMap
               scale={displacementScale}
               in2="noise2"
               result="cloud3"
             />
-            <feFlood floodColor="rgb(0,0,0)" floodOpacity="1" />
+            <feFlood floodColor="rgb(0,0,0)" floodOpacity="0.4" />
             <feComposite operator="in" in2="SourceGraphic" />
-            <feOffset dx="3" dy="13" />
-            <feMorphology radius="0 65" />
+            <feOffset dx="5" dy="10" />
+            <feMorphology radius="7 15" />
             <feGaussianBlur stdDeviation={gaussianStdDev} />
             <feDisplacementMap
               scale={displacementScale}

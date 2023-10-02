@@ -1,5 +1,6 @@
-import { Box, Center, Container, Text } from "@chakra-ui/react";
+import { Box, Center, Container } from "@chakra-ui/react";
 import jetPlanefield from "../assets/jet-planefield.jpg";
+import CloudText from "./CloudText";
 
 const HeaderOverlay = () => {
   return (
@@ -32,21 +33,7 @@ const HeaderOverlay = () => {
           minH={80}
           opacity={1}
         >
-          <Text
-            as="i"
-            fontSize={{ base: "1xl", md: "2xl" }}
-            color="whiteAlpha.900"
-          >
-            Hey, I'm
-          </Text>
-          <br />
-          <Text
-            as="b"
-            fontSize={{ base: "3xl", md: "6xl" }}
-            color="whiteAlpha.900"
-          >
-            Jet Lee
-          </Text>
+          <CloudText />
         </Center>
       </Box>
     </Container>

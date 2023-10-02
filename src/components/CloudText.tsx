@@ -1,8 +1,10 @@
-import { Text } from "@chakra-ui/react";
+import { Text, useMediaQuery } from "@chakra-ui/react";
 
 const CloudText = () => {
   const gaussianStdDev = 0;
   const displacementScale = "30";
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+
   return (
     <>
       {/* Clouds are based on CodePen from https://codepen.io/ccprog/pen/EBPOEQ*/}
@@ -74,12 +76,15 @@ const CloudText = () => {
       </svg>
       <Text
         as="b"
-        fontSize={{ base: "4xl", md: "9xl" }}
-        color="whiteAlpha.900"
-        textShadow="20px 200px 5px #fff"
+        userSelect="none"
+        fontSize={"8rem"}
+        color="rgba(0,0,0,0)"
+        textShadow="0px 0px 5px #fff"
         position="absolute"
         filter="url(#filter)"
       >
+        {isLargerThan800 ? "Hey, I'm" : ""}
+        {isLargerThan800 ? <br /> : null}
         Jet Lee
       </Text>
     </>

@@ -31,7 +31,7 @@ const HeaderOverlay = () => {
           display="flex"
           justifyContent="left"
           minH={80}
-          opacity={1}
+          border="1px"
         >
           <CloudText />
         </Center>

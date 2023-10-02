@@ -1,6 +1,6 @@
 import { Text } from "@chakra-ui/react";
 
-const CloudText2 = () => {
+const CloudText = () => {
   const gaussianStdDev = 0;
   const displacementScale = "30";
   return (
@@ -71,13 +71,12 @@ const CloudText2 = () => {
             <feMergeNode in="cloud4" id="feMergeNode960" />
           </feMerge>
         </filter>
-        <ellipse cx="500" cy="290" rx="340" ry="90" className="cloud" />
       </svg>
       <Text
         as="b"
         fontSize={{ base: "4xl", md: "9xl" }}
         color="whiteAlpha.900"
-        textShadow="20px 200px 4px #fff"
+        textShadow="20px 200px 5px #fff"
         position="absolute"
         filter="url(#filter)"
       >
@@ -87,4 +86,4 @@ const CloudText2 = () => {
   );
 };
 
-export default CloudText2;
+export default CloudText;

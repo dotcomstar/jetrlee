@@ -28,13 +28,8 @@ const ProjectCard = ({ project }: Props) => {
       <Image src={project.image} objectFit="cover" />
       <CardBody>
         <Heading size="md" my="2">
-          <LinkOverlay
-            href={`/projects/${project.slug}`}
-            // target="_blank"
-            // rel="noopener noreferrer"
-          >
-            {project.name}
-          </LinkOverlay>
+          <LinkOverlay href={`/projects/${project.slug}`} />
+          {project.name}
         </Heading>
         <Text>{project.shortDescription}</Text>
       </CardBody>

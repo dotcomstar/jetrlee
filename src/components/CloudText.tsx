@@ -14,8 +14,6 @@ const CloudText = () => {
           filterUnits="userSpaceOnUse"
           height="500"
           width="900"
-          // y="0"
-          // x="0"
         >
           <feTurbulence
             type="fractalNoise"

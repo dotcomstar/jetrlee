@@ -1,5 +1,4 @@
 import { Grid, GridItem } from "@chakra-ui/react";
-import SocialsIcons from "../components/SocialsIcons";
 import HeaderOverlay from "../components/HeaderOverlay";
 
 const HomePage = () => {
@@ -7,7 +6,6 @@ const HomePage = () => {
     <Grid>
       <GridItem>
         <HeaderOverlay />
-        <SocialsIcons />
       </GridItem>
     </Grid>
   );

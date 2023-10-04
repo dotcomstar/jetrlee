@@ -15,15 +15,6 @@ const HeaderOverlay = () => {
         left={0}
         right={0}
       >
-        <Box
-          position="absolute"
-          top={0}
-          left={0}
-          w="full"
-          h="full"
-          opacity={0.5}
-          bgBlendMode="multiply"
-        />
         <Center
           position="relative"
           zIndex={1}
@@ -31,7 +22,8 @@ const HeaderOverlay = () => {
           display="flex"
           justifyContent="left"
           minH={80}
-          border="1px"
+          px={10}
+          py={10}
         >
           <CloudText />
         </Center>

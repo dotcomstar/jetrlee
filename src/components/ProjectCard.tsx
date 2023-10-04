@@ -21,23 +21,22 @@ const ProjectCard = ({ project }: Props) => {
         transform: "scale(1.03)",
         transition: "transform .15s ease-in",
       }}
-      border="1px"
       borderRadius={10}
       as={Card}
-      p="5"
+      overflow="hidden"
     >
+      <Image src={project.image} objectFit="cover" />
       <CardBody>
         <Heading size="md" my="2">
           <LinkOverlay
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`/projects/${project.slug}`}
+            // target="_blank"
+            // rel="noopener noreferrer"
           >
             {project.name}
           </LinkOverlay>
         </Heading>
         <Text>{project.shortDescription}</Text>
-        <Image src={project.image} />
       </CardBody>
     </LinkBox>
   );

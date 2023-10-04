@@ -4,6 +4,7 @@ import Layout from "./pages/Layout";
 import ErrorPage from "./pages/ErrorPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import { PlaylistsPage } from "./pages/PlaylistsPage";
+import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 
 const router = createBrowserRouter([
   {
@@ -12,8 +13,9 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> }, // Default component
-      { path: "/projects", element: <ProjectsPage /> },
-      { path: "/playlists", element: <PlaylistsPage /> },
+      { path: "playlists", element: <PlaylistsPage /> },
+      { path: "projects", element: <ProjectsPage /> },
+      { path: "projects/:slug", element: <ProjectDetailsPage /> },
     ],
   },
 ]);

@@ -72,7 +72,7 @@ const CloudText = () => {
           </feMerge>
         </filter>
       </svg>
-      <svg height="600" width="200">
+      <svg height="600" width="3000">
         <text
           x="0"
           y="100"
@@ -81,12 +81,13 @@ const CloudText = () => {
           className="pen"
           fill="none"
           stroke="#ffffff"
-          strokeWidth="18"
+          strokeWidth="20"
           strokeLinecap="round"
-          strokeDasharray="206 206"
-          strokeDashoffset="206"
+          // strokeDasharray="206 206"
+          // strokeDashoffset="206"
+          style={{ lineHeight: 1.2 }}
         >
-          Jet
+          Jet Lee
         </text>
       </svg>
       <Text

@@ -72,6 +72,23 @@ const CloudText = () => {
           </feMerge>
         </filter>
       </svg>
+      <svg height="600" width="200">
+        <text
+          x="0"
+          y="100"
+          // filter="url(#filter)"
+          fontSize={"8rem"}
+          className="pen"
+          fill="none"
+          stroke="#ffffff"
+          strokeWidth="18"
+          strokeLinecap="round"
+          strokeDasharray="206 206"
+          strokeDashoffset="206"
+        >
+          Jet
+        </text>
+      </svg>
       <Text
         as="b"
         userSelect="none"
@@ -80,6 +97,8 @@ const CloudText = () => {
         textShadow="0px 0px 5px #fff"
         position="absolute"
         filter="url(#filter)"
+        lineHeight={1.2}
+        className="cloudText"
       >
         {isLargerThan800 ? "Hey, I'm" : ""}
         {isLargerThan800 ? <br /> : null}

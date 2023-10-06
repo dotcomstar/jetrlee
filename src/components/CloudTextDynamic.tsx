@@ -2,7 +2,7 @@ import { useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 const CloudTextDynamic = () => {
-  const gaussianStdDev = 0;
+  const gaussianStdDev = 3;
   const displacementScale = "30";
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
   const transition = { duration: 4, yoyo: Infinity, ease: "easeInOut" };

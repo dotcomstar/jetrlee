@@ -1,5 +1,6 @@
 import { useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import "./style.css";
 
 const CloudTextDynamic = () => {
   const gaussianStdDev = 3;
@@ -91,6 +92,12 @@ const CloudTextDynamic = () => {
           transition={transition}
         />
       </svg>
+      <motion.div
+        className="box"
+        initial={{ offsetDistance: "0%" }}
+        animate={{ offsetDistance: "100%" }}
+        transition={transition}
+      />
     </>
   );
 };

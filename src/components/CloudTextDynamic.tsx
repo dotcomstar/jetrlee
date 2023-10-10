@@ -36,8 +36,10 @@ const CloudTextDynamic = () => {
         <filter
           id="filter"
           filterUnits="userSpaceOnUse"
-          height="500"
-          width="900"
+          x="0"
+          y="0"
+          height="800"
+          width="1200"
         >
           <feTurbulence
             type="fractalNoise"
@@ -102,8 +104,7 @@ const CloudTextDynamic = () => {
           version="1.1"
           filter="url(#filter)"
           viewBox="0 -50 1200 500"
-          width="100vw"
-          height="auto"
+          width="max(60vw,500px)"
         >
           {paths.map((p) => (
             <motion.path

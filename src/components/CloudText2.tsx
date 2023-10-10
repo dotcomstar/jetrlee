@@ -80,9 +80,6 @@ const CloudText2 = () => {
           </feMerge>
         </filter>
       </svg>
-      <svg {...cloudEffects}>
-        <text y="140">Hey I'm</text>
-      </svg>
       {"JetLee".split("").map((c, i) => (
         <svg
           {...cloudEffects}

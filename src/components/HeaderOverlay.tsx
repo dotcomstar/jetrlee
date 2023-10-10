@@ -27,8 +27,8 @@ const HeaderOverlay = () => {
           px={10}
           py={10}
         >
-          {/* <CloudTextDynamic /> */}
-          <CloudText2 />
+          <CloudTextDynamic />
+          {/* <CloudText2 /> */}
           {/* <CloudText /> */}
         </Center>
       </Box>

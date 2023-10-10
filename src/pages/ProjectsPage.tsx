@@ -15,7 +15,7 @@ const ProjectsPage = () => {
       marginTop={3}
     >
       {data.map((project) => (
-        <GridItem>
+        <GridItem key={project.slug}>
           <ProjectCard project={project} />
         </GridItem>
       ))}

@@ -9,6 +9,7 @@ import {
   AspectRatio,
 } from "@chakra-ui/react";
 import Project from "../entities/Project";
+import noImage from "../assets//no-image-placeholder-6f3882e0.webp";
 
 interface Props {
   project: Project;

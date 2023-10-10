@@ -47,4 +47,16 @@ export default [
     endDate: "2018",
     isCurrent: false,
   },
+  {
+    name: "CS:GO Defuse CodePen",
+    description:
+      'A quick CodePen project. Hold E to defuse the "spike", just like in the hit game CS:GO',
+    shortDescription: "Defuse just like in CS:GO!",
+    image: "/src/assets/CS_Codepen.png",
+    slug: "cscodepen",
+    url: "https://codepen.io/Dotcomstar/pen/PodzVOa",
+    startDate: "2023",
+    endDate: "2023",
+    isCurrent: false,
+  },
 ];

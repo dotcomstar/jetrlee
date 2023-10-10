@@ -11,14 +11,13 @@
     );
   }
   .text-line {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: dash 5s linear forwards;
-    font-size: 80px;
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
+    animation: dash 1s linear forwards;
   }
   
   .text-line text {
-    font-family: Helvetica,Arial,sans-serif;
+    font-family:"Homemade Apple",Helvetica,Arial,sans-serif;
     font-weight: normal;
     font-style: normal;
   }

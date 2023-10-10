@@ -1,10 +1,17 @@
-import { Box, Text, useMediaQuery } from "@chakra-ui/react";
 import "./style.css";
 
 const CloudText2 = () => {
   const gaussianStdDev = 3;
   const displacementScale = "30";
-  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const cloudEffects = {
+    stroke: "#fff",
+    fontSize: "9rem",
+    strokeWidth: "15",
+    fill: "transparent",
+    filter: "url(#filter)",
+    width: "600",
+    height: "200",
+  };
 
   return (
     <>
@@ -73,25 +80,21 @@ const CloudText2 = () => {
           </feMerge>
         </filter>
       </svg>
-      <svg
-        stroke="#fff"
-        fontSize="4rem"
-        strokeWidth="10"
-        fill="transparent"
-        strokeDasharray="1000"
-        strokeDashoffset="1000"
-        className="text-line"
-        filter="url(#filter)"
-      >
-        <text x="10" y="80">
-          Hey I'm
-          {"JetLee".split("").map((c, i) => (
-            <tspan x={10 + 50 * i} y="140" style={{ animationDelay: `${i}s` }}>
-              {c}
-            </tspan>
-          ))}
-        </text>
+      <svg {...cloudEffects}>
+        <text y="140">Hey I'm</text>
       </svg>
+      {"JetLee".split("").map((c, i) => (
+        <svg
+          {...cloudEffects}
+          style={{ animationDelay: `${i}s` }}
+          className="text-line"
+          key={c + i}
+        >
+          <text y="140" key={c + i}>
+            {c}
+          </text>
+        </svg>
+      ))}
     </>
   );
 };

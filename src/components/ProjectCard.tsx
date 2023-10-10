@@ -28,7 +28,15 @@ const ProjectCard = ({ project }: Props) => {
       overflow="hidden"
     >
       <AspectRatio maxW="400px" ratio={16 / 9}>
-        <Image src={project.image} alt={project.name} objectFit="cover" />
+        <Image
+          src={project.image}
+          onError={({ currentTarget }) => {
+            currentTarget.onerror = null; // prevents looping
+            currentTarget.src = noImage;
+          }}
+          alt={project.name}
+          objectFit="cover"
+        />
       </AspectRatio>
       <CardBody>
         <Heading size="md" my="2">

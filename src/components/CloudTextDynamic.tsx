@@ -7,22 +7,25 @@ const CloudTextDynamic = () => {
   const j_path =
     "M200 200C190 200 146 23 245 4 344-15 198 461 47 452-31 410 107 231 269 248 267 266 268 247 268 247 267 254 267 248 267 248";
   const el_path =
-    "M20 180C20 180 126 142 105 91 84 40-30 186 26 225 82 264 123 197 121 202 119 207 158 162 189 87 220 12 198 8 198 8 198 8 102 331 223 209";
+    "M287 248C287 248 393 210 372 159 351 108 237 254 293 293 349 332 390 265 388 270 386 275 425 230 456 155 487 80 465 76 465 76 465 76 369 399 490 277";
   const lee_path =
-    "M320 140C320 140 386 13 294 22 202 31 234 405 84 390-66 375 63 288 184 356 305 424 336 349 310 381 284 413 353 330 353 330 353 330 483 279 435 232 387 185 303 357 377 384 451 411 455 315 457 348 459 381 487 329 487 329 487 329 629 264 570 230 511 196 452 382 532 385 612 388 602 316 594 348";
+    "M890 77C890 77 956-50 864-41 772-32 804 342 654 327 504 312 633 225 754 293 875 361 906 286 880 318 854 350 923 267 923 267 923 267 1053 216 1005 169 957 122 873 294 947 321 1021 348 1025 252 1027 285 1029 318 1057 266 1057 266 1057 266 1199 201 1140 167 1081 133 1022 319 1102 322 1182 325 1172 253 1164 285";
 
   const paths = [
     {
+      id: 1,
       path: j_path,
-      transition: { duration: 0.5, ease: "easeInOut", delay: 0 },
+      transition: { duration: 0.5, ease: "easeIn", delay: 0 },
     },
     {
+      id: 2,
       path: el_path,
-      transition: { duration: 1, ease: "easeInOut", delay: 0.5 },
+      transition: { duration: 1, ease: "linear", delay: 0.5 },
     },
     {
+      id: 3,
       path: lee_path,
-      transition: { duration: 2, ease: "easeInOut", delay: 1.5 },
+      transition: { duration: 2, ease: "easeOut", delay: 2.2 },
     },
   ];
 
@@ -98,12 +101,13 @@ const CloudTextDynamic = () => {
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
           filter="url(#filter)"
-          width="800"
-          height="400"
+          viewBox="0 -50 1200 500"
+          width="100vw"
+          height="auto"
         >
           {paths.map((p) => (
             <motion.path
-              key={p.path}
+              key={p.id}
               d={p.path}
               fill="none"
               strokeWidth="23"

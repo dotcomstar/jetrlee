@@ -12,9 +12,18 @@ const CloudTextDynamic = () => {
     "M320 140C320 140 386 13 294 22 202 31 234 405 84 390-66 375 63 288 184 356 305 424 336 349 310 381 284 413 353 330 353 330 353 330 483 279 435 232 387 185 303 357 377 384 451 411 455 315 457 348 459 381 487 329 487 329 487 329 629 264 570 230 511 196 452 382 532 385 612 388 602 316 594 348";
 
   const paths = [
-    { path: j_path, transition: { duration: 0.5, ease: "easeInOut" } },
-    { path: el_path, transition: { duration: 1, ease: "easeInOut" } },
-    { path: lee_path, transition: { duration: 2, ease: "easeInOut" } },
+    {
+      path: j_path,
+      transition: { duration: 0.5, ease: "easeInOut", delay: 0 },
+    },
+    {
+      path: el_path,
+      transition: { duration: 1, ease: "easeInOut", delay: 0.5 },
+    },
+    {
+      path: lee_path,
+      transition: { duration: 2, ease: "easeInOut", delay: 1.5 },
+    },
   ];
 
   return (
@@ -94,11 +103,11 @@ const CloudTextDynamic = () => {
         >
           {paths.map((p) => (
             <motion.path
+              key={p.path}
               d={p.path}
               fill="none"
               strokeWidth="23"
               stroke="#fff"
-              strokeLinecap="round"
               initial={{ pathLength: 0 }}
               animate={{ pathLength: 1 }}
               transition={p.transition}

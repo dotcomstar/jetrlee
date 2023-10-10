@@ -6,6 +6,7 @@ import {
   LinkOverlay,
   Text,
   Image,
+  AspectRatio,
 } from "@chakra-ui/react";
 import Project from "../entities/Project";
 
@@ -25,7 +26,9 @@ const ProjectCard = ({ project }: Props) => {
       as={Card}
       overflow="hidden"
     >
-      <Image src={project.image} objectFit="cover" />
+      <AspectRatio maxW="400px" ratio={16 / 9}>
+        <Image src={project.image} alt={project.name} objectFit="cover" />
+      </AspectRatio>
       <CardBody>
         <Heading size="md" my="2">
           <LinkOverlay href={`/projects/${project.slug}`} />

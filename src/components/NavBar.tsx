@@ -18,7 +18,7 @@ const NavBar = () => {
       justifyContent="center"
       height={navBarHeight}
     >
-      <HStack>
+      <HStack justifyContent="space-around" width="50%">
         <Link to="/">
           <Icon
             as={FaFighterJet}

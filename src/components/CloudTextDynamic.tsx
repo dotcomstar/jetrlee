@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
+import { useMediaQuery } from "@chakra-ui/react";
 import "./style.css";
 
 const CloudTextDynamic = () => {
   const gaussianStdDev = 3;
   const displacementScale = "30";
+  const [isLargerThan500] = useMediaQuery("(min-width: 500px)");
+  const shouldGenerateLee = isLargerThan500;
   const j_path =
     "M200 200C190 200 146 23 245 4 344-15 198 461 47 452-31 410 107 231 269 248 267 266 268 247 268 247 267 254 267 248 267 248";
   const el_path =
@@ -98,26 +101,33 @@ const CloudTextDynamic = () => {
           </feMerge>
         </filter>
       </svg>
-      <div>
+      <div
+        style={{
+          position: "absolute",
+        }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
           filter="url(#filter)"
-          viewBox="0 -50 1200 500"
-          width="max(60vw,500px)"
+          viewBox={shouldGenerateLee ? "0 -50 1200 500" : "0 0 500 500"}
+          width="60vw"
         >
-          {paths.map((p) => (
-            <motion.path
-              key={p.id}
-              d={p.path}
-              fill="none"
-              strokeWidth="23"
-              stroke="#fff"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={p.transition}
-            />
-          ))}
+          {paths.map(
+            (p) =>
+              (shouldGenerateLee || p.id !== 3) && (
+                <motion.path
+                  key={p.id}
+                  d={p.path}
+                  fill="none"
+                  strokeWidth="23"
+                  stroke="#fff"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={p.transition}
+                />
+              )
+          )}
         </svg>
       </div>
     </>

@@ -5,7 +5,6 @@ import {
   useRouteError,
 } from "react-router-dom";
 import { MdHome } from "react-icons/md";
-import NavBar from "../components/NavBar";
 
 const ErrorPage = () => {
   const navigate = useNavigate();
@@ -26,8 +25,7 @@ const ErrorPage = () => {
 
   return (
     <>
-      <NavBar />
-      <Box px={{ base: 3, md: 5 }} py={{ base: "60px" }} as="main">
+      <Box px={{ base: 3, md: 5 }} as="main">
         <Heading>Oops...</Heading>
         <Text>{errorMessage}</Text>
         <Button leftIcon={<MdHome />} onClick={() => navigate("/")}>

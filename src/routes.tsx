@@ -10,7 +10,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    errorElement: <ErrorPage />,
+    errorElement: <Layout outlet={<ErrorPage />} />,
     children: [
       { index: true, element: <HomePage /> }, // Default component
       { path: "playlists", element: <PlaylistsPage /> },

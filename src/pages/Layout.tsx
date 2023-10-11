@@ -3,12 +3,16 @@ import { Box } from "@chakra-ui/react";
 import NavBar, { navBarHeight } from "../components/NavBar";
 import SocialsIcons from "../components/SocialsIcons";
 
-const Layout = () => {
+interface LayoutProps {
+  outlet?: any;
+}
+
+const Layout = ({ outlet }: LayoutProps) => {
   return (
     <>
       <NavBar />
       <Box py={{ base: navBarHeight }} as="main">
-        <Outlet />
+        {outlet ? outlet : <Outlet />}
       </Box>
       <SocialsIcons />
     </>

@@ -1,6 +1,7 @@
 import { Box, Center, Container } from "@chakra-ui/react";
 import jetPlanefield from "../assets/jet-planefield.jpg";
 import CloudTextDynamic from "./CloudTextDynamic";
+import { navBarHeight } from "./NavBar";
 
 const HeaderOverlay = () => {
   return (
@@ -16,14 +17,13 @@ const HeaderOverlay = () => {
         right={0}
       >
         <Center
-          position="relative"
+          position="absolute"
           zIndex={1}
           textAlign="left"
           display="flex"
-          justifyContent="left"
+          justifyContent="top left"
           minH={80}
-          px={10}
-          py={10}
+          pl={10}
         >
           <CloudTextDynamic />
         </Center>

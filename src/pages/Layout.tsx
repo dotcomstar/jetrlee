@@ -9,13 +9,13 @@ interface LayoutProps {
 
 const Layout = ({ outlet }: LayoutProps) => {
   return (
-    <>
+    <div id="top">
       <NavBar />
       <Box py={{ base: navBarHeight }} as="main">
         {outlet ? outlet : <Outlet />}
       </Box>
       <SocialsIcons />
-    </>
+    </div>
   );
 };
 

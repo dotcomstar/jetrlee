@@ -1,8 +1,8 @@
 import { Flex, HStack, Icon, Text } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import ColorModeSwitch from "./ColorModeSwitch";
 import { FaFighterJet } from "react-icons/fa";
-import { HashLink } from "react-router-hash-link";
+import { NavHashLink } from "react-router-hash-link";
 
 export const navBarHeight = "60px";
 
@@ -20,7 +20,15 @@ const NavBar = () => {
       height={navBarHeight}
     >
       <HStack justifyContent="space-around" width="50%">
-        <Link to="/">
+        <NavHashLink
+          to="/#top"
+          style={({ isActive, isPending }) => {
+            return {
+              fontWeight: isActive ? "bold" : "",
+              color: isPending ? "red" : "",
+            };
+          }}
+        >
           <Icon
             as={FaFighterJet}
             maxWidth="none"
@@ -28,13 +36,29 @@ const NavBar = () => {
             objectFit="fill"
             verticalAlign="middle"
           />
-        </Link>
-        <HashLink to="/#projects">
+        </NavHashLink>
+        <NavHashLink
+          to="/#projects"
+          style={({ isActive, isPending }) => {
+            return {
+              fontWeight: isActive ? "bold" : "",
+              color: isPending ? "red" : "",
+            };
+          }}
+        >
           <Text>Projects</Text>
-        </HashLink>
-        <Link to="/playlists">
+        </NavHashLink>
+        <NavLink
+          to="/playlists"
+          style={({ isActive, isPending }) => {
+            return {
+              fontWeight: isActive ? "bold" : "",
+              color: isPending ? "red" : "",
+            };
+          }}
+        >
           <Text>Playlists</Text>
-        </Link>
+        </NavLink>
         <ColorModeSwitch />
       </HStack>
     </Flex>

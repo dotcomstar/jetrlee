@@ -2,6 +2,7 @@ import { Flex, HStack, Icon, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import ColorModeSwitch from "./ColorModeSwitch";
 import { FaFighterJet } from "react-icons/fa";
+import { HashLink } from "react-router-hash-link";
 
 export const navBarHeight = "60px";
 
@@ -28,9 +29,9 @@ const NavBar = () => {
             verticalAlign="middle"
           />
         </Link>
-        <Link to="/projects">
+        <HashLink to="/#projects">
           <Text>Projects</Text>
-        </Link>
+        </HashLink>
         <Link to="/playlists">
           <Text>Playlists</Text>
         </Link>

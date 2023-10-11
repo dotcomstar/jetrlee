@@ -1,7 +1,6 @@
 import { Box, Center, Container } from "@chakra-ui/react";
 import jetPlanefield from "../assets/jet-planefield.jpg";
 import CloudTextDynamic from "./CloudTextDynamic";
-import { navBarHeight } from "./NavBar";
 
 const HeaderOverlay = () => {
   return (

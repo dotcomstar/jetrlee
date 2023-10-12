@@ -4,7 +4,6 @@ import {
   Heading,
   Image,
   Text,
-  LinkOverlay,
   HStack,
   Link,
   Icon,
@@ -50,7 +49,9 @@ const ProjectDetailsPage = () => {
         <Text>{project.description}</Text>
       </GridItem>
       <GridItem>
-        <Image src={project.image} objectFit="cover" />
+        <Link isExternal href={project.url}>
+          <Image src={project.image} objectFit="cover" />
+        </Link>
       </GridItem>
     </SimpleGrid>
   );

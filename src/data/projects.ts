@@ -37,7 +37,8 @@ export default [
   },
   {
     name: "Botball Robotics",
-    description: "Watch our globals run!",
+    description:
+      "A fully-autonomous robotics tournament for high-school students. Watch us place top 10 at the Global GCER tournament!",
     shortDescription:
       "Placed 10th globally at a fully-autonomous high school robotics competition",
     image: "https://img.youtube.com/vi/ZzfZ50dQAYE/sddefault.jpg",

@@ -27,7 +27,7 @@ export default [
   {
     name: "Formula E Dashboard",
     description:
-      "Designed and built a functional dashboard for UMD's Formula E racecar team",
+      "Designed and built a functional dashboard for UMD's Formula E racecar team.",
     shortDescription: "Dashboard for UMD's Formula E racecar team",
     image: "/src/assets/FEDashboard.png",
     slug: "fedashboard",
@@ -52,7 +52,7 @@ export default [
   {
     name: "CS:GO Defuse CodePen",
     description:
-      'A quick CodePen project. Hold E to defuse the "spike", just like in the hit game CS:GO',
+      'A quick CodePen project. Hold E to defuse the "spike", just like in the hit game CS:GO.',
     shortDescription: "Defuse just like in CS:GO!",
     image: "/src/assets/CS_Codepen.png",
     slug: "cscodepen",

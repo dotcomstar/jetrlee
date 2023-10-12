@@ -19,7 +19,7 @@ const ProjectDetailsPage = () => {
   const project = useDataPoint<Project>(projects, slug!)!;
 
   return (
-    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
+    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5} px={5} pt={3}>
       <GridItem>
         <HStack justifyContent="left">
           <Heading>{project.name}</Heading>

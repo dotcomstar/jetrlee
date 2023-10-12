@@ -2,11 +2,17 @@ import { Flex, HStack, Icon, Text } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import ColorModeSwitch from "./ColorModeSwitch";
 import { FaFighterJet } from "react-icons/fa";
-import { NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 
 export const navBarHeight = "60px";
 
 const NavBar = () => {
+  const scrollWithOffset = (el: HTMLElement) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -80;
+    window.scrollTo({ top: yCoordinate + yOffset });
+  };
+
   return (
     <Flex
       as="header"
@@ -20,16 +26,7 @@ const NavBar = () => {
       height={navBarHeight}
     >
       <HStack justifyContent="space-around" width="50%">
-        <NavHashLink
-          to="/#top"
-          reloadDocument
-          style={({ isActive, isPending }) => {
-            return {
-              fontWeight: isActive ? "bold" : "",
-              color: isPending ? "red" : "",
-            };
-          }}
-        >
+        <HashLink to="/#top" reloadDocument>
           <Icon
             as={FaFighterJet}
             maxWidth="none"
@@ -37,18 +34,10 @@ const NavBar = () => {
             objectFit="fill"
             verticalAlign="middle"
           />
-        </NavHashLink>
-        <NavHashLink
-          to="/#projects"
-          style={({ isActive, isPending }) => {
-            return {
-              fontWeight: isActive ? "bold" : "",
-              color: isPending ? "red" : "",
-            };
-          }}
-        >
+        </HashLink>
+        <HashLink to="/#projects" scroll={scrollWithOffset}>
           <Text>Projects</Text>
-        </NavHashLink>
+        </HashLink>
         <NavLink
           to="/playlists"
           style={({ isActive, isPending }) => {

@@ -1,18 +1,17 @@
 import {
-  SimpleGrid,
   GridItem,
+  HStack,
   Heading,
   Image,
-  Text,
-  HStack,
   Link,
-  Icon,
+  SimpleGrid,
+  Text,
 } from "@chakra-ui/react";
-import { FaGithub, FaGlobe } from "react-icons/fa";
 import { useParams } from "react-router-dom";
-import Project from "../entities/Project";
 import projects from "../data/projects";
+import Project from "../entities/Project";
 import useDataPoint from "../hooks/useDataPoint";
+import LinkIcons from "../components/LinkIcons";
 
 const ProjectDetailsPage = () => {
   const { slug } = useParams();
@@ -23,28 +22,7 @@ const ProjectDetailsPage = () => {
       <GridItem>
         <HStack justifyContent="left">
           <Heading>{project.name}</Heading>
-          {project.docs && (
-            <Link
-              href={project.docs}
-              key={project.docs}
-              isExternal
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Icon as={FaGithub} boxSize={"30px"} color={"black.500"} />
-            </Link>
-          )}
-          {project.url && (
-            <Link
-              isExternal
-              href={project.url}
-              key={project.slug}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Icon as={FaGlobe} boxSize={"30px"} color={"black.500"} />
-            </Link>
-          )}
+          <LinkIcons docs={project.docs} url={project.url} />
         </HStack>
         <Text>{project.description}</Text>
       </GridItem>

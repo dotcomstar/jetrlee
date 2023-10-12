@@ -7,9 +7,11 @@ import {
   Text,
   Image,
   AspectRatio,
+  HStack,
 } from "@chakra-ui/react";
 import Project from "../entities/Project";
 import noImage from "../assets//no-image-placeholder-6f3882e0.webp";
+import LinkIcons from "./LinkIcons";
 
 interface Props {
   project: Project;
@@ -39,10 +41,13 @@ const ProjectCard = ({ project }: Props) => {
         />
       </AspectRatio>
       <CardBody>
-        <Heading size="md" my="2">
-          <LinkOverlay href={`/projects/${project.slug}`} />
-          {project.name}
-        </Heading>
+        <HStack justifyContent="space-between">
+          <Heading size="md" my="2">
+            <LinkOverlay href={`/projects/${project.slug}`} />
+            {project.name}
+          </Heading>
+          <LinkIcons docs={project.docs} url={project.url} size="25px" />
+        </HStack>
         <Text>{project.shortDescription}</Text>
       </CardBody>
     </LinkBox>

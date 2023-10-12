@@ -13,7 +13,7 @@ const NavBar = () => {
       position="fixed"
       backgroundColor="rgba(100, 
  100, 255, 0.1)"
-      backdropFilter="blur(2px)"
+      backdropFilter="blur(10px)"
       w="100%"
       zIndex="200"
       justifyContent="center"

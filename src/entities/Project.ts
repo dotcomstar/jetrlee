@@ -4,7 +4,8 @@ export default interface Project {
   shortDescription: string;
   image: string;
   slug: string;
-  url: string;
+  url?: string;
+  docs?: string;
   startDate: string;
   endDate: string;
   isCurrent: boolean;

@@ -5,7 +5,11 @@ import {
   Image,
   Text,
   LinkOverlay,
+  HStack,
+  Link,
+  Icon,
 } from "@chakra-ui/react";
+import { FaGithub, FaGlobe } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import Project from "../entities/Project";
 import projects from "../data/projects";
@@ -18,12 +22,31 @@ const ProjectDetailsPage = () => {
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
       <GridItem>
-        <LinkOverlay
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-        />
-        <Heading>{project.name}</Heading>
+        <HStack justifyContent="left">
+          <Heading>{project.name}</Heading>
+          {project.docs && (
+            <Link
+              href={project.docs}
+              key={project.docs}
+              isExternal
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon as={FaGithub} boxSize={"30px"} color={"black.500"} />
+            </Link>
+          )}
+          {project.url && (
+            <Link
+              isExternal
+              href={project.url}
+              key={project.slug}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon as={FaGlobe} boxSize={"30px"} color={"black.500"} />
+            </Link>
+          )}
+        </HStack>
         <Text>{project.description}</Text>
       </GridItem>
       <GridItem>

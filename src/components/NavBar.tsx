@@ -22,6 +22,7 @@ const NavBar = () => {
       <HStack justifyContent="space-around" width="50%">
         <NavHashLink
           to="/#top"
+          reloadDocument
           style={({ isActive, isPending }) => {
             return {
               fontWeight: isActive ? "bold" : "",

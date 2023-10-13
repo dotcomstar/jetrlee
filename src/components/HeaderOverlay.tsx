@@ -1,4 +1,4 @@
-import { Box, Center, Container, Text } from "@chakra-ui/react";
+import { Box, Center, Container } from "@chakra-ui/react";
 import jetPlanefield from "../assets/jet-planefield.jpg";
 import CloudTextDynamic from "./CloudTextDynamic";
 import CloudText2 from "./CloudText2";

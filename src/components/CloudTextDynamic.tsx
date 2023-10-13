@@ -14,8 +14,6 @@ const CloudTextDynamic = () => {
   const lee_path =
     "M890 77C890 77 956-50 864-41 772-32 804 342 654 327 504 312 633 225 754 293 875 361 906 286 880 318 854 350 923 267 923 267 923 267 1053 216 1005 169 957 122 873 294 947 321 1021 348 1025 252 1027 285 1029 318 1057 266 1057 266 1057 266 1199 201 1140 167 1081 133 1022 319 1102 322 1182 325 1172 253 1164 285";
 
-  console.log(shouldGenerateLee);
-
   const paths = [
     {
       id: 1,
@@ -114,6 +112,7 @@ const CloudTextDynamic = () => {
           filter="url(#filter)"
           viewBox={shouldGenerateLee ? "0 -50 1200 500" : "0 0 500 500"}
           width="60vw"
+          height="200px"
         >
           {paths.map(
             (p) =>

@@ -1,6 +1,7 @@
 import { Box, Center, Container, Text } from "@chakra-ui/react";
 import jetPlanefield from "../assets/jet-planefield.jpg";
 import CloudTextDynamic from "./CloudTextDynamic";
+import CloudText2 from "./CloudText2";
 
 const HeaderOverlay = () => {
   return (
@@ -24,9 +25,7 @@ const HeaderOverlay = () => {
           minH={80}
           pl={10}
         >
-          <Text color={"whiteAlpha.900"} fontSize="9xl">
-            Testing
-          </Text>
+          <CloudText2 />
           <CloudTextDynamic />
         </Center>
       </Box>

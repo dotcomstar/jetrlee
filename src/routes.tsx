@@ -13,6 +13,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> }, // Default component
       { path: "playlists", element: <PlaylistsPage /> },
+      { path: "projects", element: <PlaylistsPage /> },
       { path: "projects/:slug", element: <ProjectDetailsPage /> },
     ],
   },

@@ -9,24 +9,24 @@ import {
 } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import LinkIcons from "../components/LinkIcons";
-import NavigationButtons from "../components/NavigationButtons";
+// import NavigationButtons from "../components/NavigationButtons";
 import projects from "../data/projects";
 import Project from "../entities/Project";
 import useDataPoint from "../hooks/useDataPoint";
-import useIndex from "../hooks/useIndex";
+// import useIndex from "../hooks/useIndex";
 
 const ProjectDetailsPage = () => {
   const { slug } = useParams();
   const project = useDataPoint<Project>(projects, slug!)!;
-  const index = useIndex<Project>(projects, slug!)!;
-  const prev =
-    projects[
-      (((index - 1) % projects.length) + projects.length) % projects.length
-    ];
-  const next =
-    projects[
-      (((index + 1) % projects.length) + projects.length) % projects.length
-    ];
+  // const index = useIndex<Project>(projects, slug!)!;
+  // const prev =
+  //   projects[
+  //     (((index - 1) % projects.length) + projects.length) % projects.length
+  //   ];
+  // const next =
+  //   projects[
+  //     (((index + 1) % projects.length) + projects.length) % projects.length
+  //   ];
 
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5} px={5} pt={3}>

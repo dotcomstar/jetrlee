@@ -1,4 +1,4 @@
-import { Center, HStack, Icon, Link, VStack } from "@chakra-ui/react";
+import { Center, HStack, Icon, Link } from "@chakra-ui/react";
 import { FaCaretSquareLeft, FaCaretSquareRight } from "react-icons/fa";
 
 interface NavigationProps {

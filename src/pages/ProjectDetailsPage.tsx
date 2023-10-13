@@ -1,22 +1,19 @@
 import {
-  Center,
   GridItem,
   HStack,
   Heading,
-  Icon,
   Image,
   Link,
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import { FaCaretSquareLeft, FaCaretSquareRight } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import LinkIcons from "../components/LinkIcons";
+import NavigationButtons from "../components/NavigationButtons";
 import projects from "../data/projects";
 import Project from "../entities/Project";
 import useDataPoint from "../hooks/useDataPoint";
 import useIndex from "../hooks/useIndex";
-import NavigationButtons from "../components/NavigationButtons";
 
 const ProjectDetailsPage = () => {
   const { slug } = useParams();

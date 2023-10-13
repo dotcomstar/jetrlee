@@ -42,14 +42,14 @@ const ProjectDetailsPage = () => {
           <Image src={project.image} objectFit="cover" />
         </Link>
       </GridItem>
-      <GridItem colSpan={{ base: 1, md: 2 }}>
+      {/* <GridItem colSpan={{ base: 1, md: 2 }}>
         <NavigationButtons
           prevSlug={prev.slug}
           prevName={prev.name}
           nextSlug={next.slug}
           nextName={next.name}
         />
-      </GridItem>
+      </GridItem> */}
     </SimpleGrid>
   );
 };

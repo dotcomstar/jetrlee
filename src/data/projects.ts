@@ -4,7 +4,7 @@ export default [
     description:
       "A website to auto-generate the best course schedule for UMD students. Just input your courses and click generate!",
     shortDescription: "Find the best schedule for UMD Courses",
-    image: "/src/assets/ScheduleTerpWebsite.png",
+    image: "/ScheduleTerpWebsite.png",
     slug: "scheduleterp",
     url: "https://scheduleterp.vercel.app/",
     docs: "https://github.com/dotcomstar/ScheduleTerpFrontend",
@@ -16,7 +16,7 @@ export default [
     name: "GameHub Website",
     description: "A website to find new games to play!",
     shortDescription: "Find new games to play!",
-    image: "/src/assets/GameHubWebsite.png",
+    image: "/GameHubWebsite.png",
     slug: "gamehub",
     url: "https://game-hub-brown.vercel.app/",
     docs: "https://github.com/dotcomstar/game-hub",
@@ -29,7 +29,7 @@ export default [
     description:
       "Designed and built a functional dashboard for UMD's Formula E racecar team.",
     shortDescription: "Dashboard for UMD's Formula E racecar team",
-    image: "/src/assets/FEDashboard.png",
+    image: "/FEDashboard.png",
     slug: "fedashboard",
     startDate: "2022",
     endDate: "2022",
@@ -54,7 +54,7 @@ export default [
     description:
       'A quick CodePen project. Hold E to defuse the "spike", just like in the hit game CS:GO.',
     shortDescription: "Defuse just like in CS:GO!",
-    image: "/src/assets/CS_Codepen.png",
+    image: "/CS_Codepen.png",
     slug: "cscodepen",
     url: "https://codepen.io/Dotcomstar/pen/PodzVOa",
     startDate: "2023",

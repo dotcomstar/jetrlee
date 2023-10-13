@@ -120,7 +120,7 @@ const CloudTextDynamic = () => {
                 <motion.path
                   key={p.id}
                   d={p.path}
-                  fill="none"
+                  fill="black"
                   strokeWidth="23"
                   stroke="#fff"
                   initial={{ pathLength: 0 }}

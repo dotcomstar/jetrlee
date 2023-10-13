@@ -16,6 +16,7 @@ import projects from "../data/projects";
 import Project from "../entities/Project";
 import useDataPoint from "../hooks/useDataPoint";
 import useIndex from "../hooks/useIndex";
+import NavigationButtons from "../components/NavigationButtons";
 
 const ProjectDetailsPage = () => {
   const { slug } = useParams();
@@ -44,27 +45,13 @@ const ProjectDetailsPage = () => {
           <Image src={project.image} objectFit="cover" />
         </Link>
       </GridItem>
-      <GridItem colSpan={2} bg={"blue"}>
-        <Center>
-          <HStack>
-            <Link href={prev.slug} key={prev.slug}>
-              {prev.name}
-              <Icon
-                as={FaCaretSquareLeft}
-                boxSize={"30px"}
-                color={"black.500"}
-              />
-            </Link>
-            <Link href={next.slug} key={next.slug}>
-              <Icon
-                as={FaCaretSquareRight}
-                boxSize={"30px"}
-                color={"black.500"}
-              />
-              {next.name}
-            </Link>
-          </HStack>
-        </Center>
+      <GridItem colSpan={2}>
+        <NavigationButtons
+          prevSlug={prev.slug}
+          prevName={prev.name}
+          nextSlug={next.slug}
+          nextName={next.name}
+        />
       </GridItem>
     </SimpleGrid>
   );

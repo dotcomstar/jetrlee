@@ -1,0 +1,33 @@
+import { Center, HStack, Icon, Link } from "@chakra-ui/react";
+import { FaCaretSquareLeft, FaCaretSquareRight } from "react-icons/fa";
+
+interface NavigationProps {
+  prevSlug: string;
+  prevName: string;
+  nextSlug: string;
+  nextName: string;
+}
+
+const NavigationButtons = ({
+  prevName,
+  prevSlug,
+  nextName,
+  nextSlug,
+}: NavigationProps) => {
+  return (
+    <Center>
+      <HStack>
+        <Link href={prevSlug} key={prevSlug}>
+          {prevName}
+          <Icon as={FaCaretSquareLeft} boxSize={"30px"} color={"black.500"} />
+        </Link>
+        <Link href={nextSlug} key={nextSlug}>
+          <Icon as={FaCaretSquareRight} boxSize={"30px"} color={"black.500"} />
+          {nextName}
+        </Link>
+      </HStack>
+    </Center>
+  );
+};
+
+export default NavigationButtons;

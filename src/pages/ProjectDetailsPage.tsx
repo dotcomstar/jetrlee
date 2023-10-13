@@ -45,7 +45,7 @@ const ProjectDetailsPage = () => {
           <Image src={project.image} objectFit="cover" />
         </Link>
       </GridItem>
-      <GridItem colSpan={2}>
+      <GridItem colSpan={{ base: 1, md: 2 }}>
         <NavigationButtons
           prevSlug={prev.slug}
           prevName={prev.name}

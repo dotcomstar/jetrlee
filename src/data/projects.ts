@@ -1,5 +1,18 @@
 export default [
   {
+    name: "Triviale",
+    description:
+      "A wordle-like game for trivia questions. Answer 3 new questions every day!",
+    shortDescription: "A daily trivia puzzle game",
+    image: "/Triviale.png",
+    slug: "triviale",
+    url: "https://trivialle.vercel.app/",
+    docs: "https://github.com/dotcomstar/Triviale",
+    startDate: "2023",
+    endDate: "2023",
+    isCurrent: true,
+  },
+  {
     name: "ScheduleTerp Website",
     description:
       "A website to auto-generate the best course schedule for UMD students. Just input your courses and click generate!",
@@ -10,7 +23,7 @@ export default [
     docs: "https://github.com/dotcomstar/ScheduleTerpFrontend",
     startDate: "2023",
     endDate: "2023",
-    isCurrent: true,
+    isCurrent: false,
   },
   {
     name: "GameHub Website",
@@ -22,7 +35,7 @@ export default [
     docs: "https://github.com/dotcomstar/game-hub",
     startDate: "2023",
     endDate: "2023",
-    isCurrent: true,
+    isCurrent: false,
   },
   {
     name: "Formula E Dashboard",

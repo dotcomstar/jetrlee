@@ -23,6 +23,7 @@ const HeaderOverlay = () => {
           justifyContent="top left"
           minH={80}
           pl={10}
+          pt={"15vh"}
         >
           <CloudTextDynamic />
         </Center>

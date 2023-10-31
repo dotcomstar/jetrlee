@@ -112,7 +112,7 @@ const CloudTextDynamic = () => {
           filter="url(#filter)"
           viewBox={shouldGenerateLee ? "0 -50 1200 500" : "0 0 500 500"}
           // width="60vw"
-          width="1000px"
+          width="60vw"
           // height="200px"
         >
           {paths.map(

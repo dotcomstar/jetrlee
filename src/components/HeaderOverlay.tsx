@@ -1,8 +1,11 @@
-import { Box, Center, Container } from "@chakra-ui/react";
+import { Box, Center, Container, useMediaQuery } from "@chakra-ui/react";
 import jetPlanefield from "../assets/jet-planefield.jpg";
 import CloudTextDynamic from "./CloudTextDynamic";
 
 const HeaderOverlay = () => {
+  // single media query with no options
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+
   return (
     <Container maxW="100vw" p={0}>
       <Box
@@ -18,12 +21,11 @@ const HeaderOverlay = () => {
         <Center
           position="absolute"
           zIndex={1}
-          textAlign="left"
           display="flex"
           justifyContent="top left"
           minH={80}
-          pl={10}
-          pt={"15vh"}
+          pl={3}
+          mt={isLargerThan800 ? "10vh" : "-10"}
         >
           <CloudTextDynamic />
         </Center>

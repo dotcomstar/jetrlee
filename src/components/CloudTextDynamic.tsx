@@ -35,7 +35,10 @@ const CloudTextDynamic = () => {
   return (
     <>
       {/* Clouds are based on CodePen from https://codepen.io/ccprog/pen/EBPOEQ*/}
-      <svg xmlns="http://www.w3.org/2000/svg">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox={shouldGenerateLee ? "0 -50 1200 500" : "0 0 500 500"}
+      >
         <filter
           id="filter"
           filterUnits="userSpaceOnUse"
@@ -110,7 +113,7 @@ const CloudTextDynamic = () => {
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
           filter="url(#filter)"
-          viewBox={shouldGenerateLee ? "0 -50 1200 500" : "0 0 500 500"}
+          viewBox={shouldGenerateLee ? "0 -100 1200 600" : "0 0 500 500"}
           // width="60vw"
           width="60vw"
           // height="200px"

@@ -17,8 +17,9 @@ const NavBar = () => {
     <Flex
       as="header"
       position="fixed"
-      backgroundColor="rgba(100, 
- 100, 255, 0.1)"
+      backgroundColor="rgba(23, 
+ 50, 87, 0.4)"
+      textColor={"white"}
       backdropFilter="blur(10px)"
       w="100%"
       zIndex="200"
@@ -36,7 +37,7 @@ const NavBar = () => {
           />
         </HashLink>
         <HashLink to="/#projects" scroll={scrollWithOffset}>
-          <Text>Projects</Text>
+          <Text>Projects</Text>{" "}
         </HashLink>
         <NavLink
           to="/playlists"

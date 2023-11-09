@@ -11,9 +11,8 @@ const Layout = ({ outlet }: LayoutProps) => {
   return (
     <div id="top">
       <NavBar />
-      <Box py={{ base: navBarHeight }} as="main">
-        {outlet ? outlet : <Outlet />}
-      </Box>
+      <Box height={navBarHeight} bgColor={"#acc8ef"}></Box>
+      <Box as="main">{outlet ? outlet : <Outlet />}</Box>
       <SocialsIcons />
     </div>
   );

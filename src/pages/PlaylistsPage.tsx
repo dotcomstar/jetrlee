@@ -23,11 +23,7 @@ export const PlaylistsPage = () => {
           textColor={"#191414"}
         >
           <Heading size="md" mt="2" mx="2">
-            <LinkOverlay
-              href={playlist.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <LinkOverlay href={playlist.url} target="_blank" rel="noopener">
               {playlist.title}
             </LinkOverlay>
           </Heading>

@@ -5,5 +5,5 @@ export default [
     slug: "linkedin",
     url: "https://www.linkedin.com/in/jetrlee",
   },
-  { name: "Email", slug: "email", url: "mailto:gamestar109@live.com" },
+  { name: "Email", slug: "email", url: "mailto:jetrlee@gmail.com" },
 ];

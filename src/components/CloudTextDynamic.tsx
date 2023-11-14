@@ -13,6 +13,9 @@ const CloudTextDynamic = () => {
     "M287 248C287 248 393 210 372 159 351 108 237 254 293 293 349 332 390 265 388 270 386 275 425 230 456 155 487 80 465 76 465 76 465 76 369 399 490 277";
   const lee_path =
     "M890 77C890 77 956-50 864-41 772-32 804 342 654 327 504 312 633 225 754 293 875 361 906 286 880 318 854 350 923 267 923 267 923 267 1053 216 1005 169 957 122 873 294 947 321 1021 348 1025 252 1027 285 1029 318 1057 266 1057 266 1057 266 1199 201 1140 167 1081 133 1022 319 1102 322 1182 325 1172 253 1164 285";
+  const iOS =
+    typeof navigator !== "undefined" &&
+    /iPad|iPhone|iPod/.test(navigator.userAgent);
 
   const paths = [
     {
@@ -31,6 +34,11 @@ const CloudTextDynamic = () => {
       transition: { duration: 2, ease: "easeOut", delay: 2.2 },
     },
   ];
+
+  // Don't render clouds on iOS because the SVG effect doesn't apply.
+  if (iOS) {
+    return null;
+  }
 
   return (
     <>

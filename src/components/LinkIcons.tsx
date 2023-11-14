@@ -11,13 +11,7 @@ const LinkIcons = ({ docs, url, size = "30px" }: LinkIconProps) => {
   return (
     <HStack>
       {docs && (
-        <Link
-          href={docs}
-          key={docs}
-          isExternal
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href={docs} key={docs} isExternal target="_blank" rel="noopener">
           <Icon as={FaGithub} boxSize={size} color={"black.500"} />
         </Link>
       )}

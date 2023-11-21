@@ -3,9 +3,11 @@ import projects from "../../../data/projects";
 import Project from "../../../entities/Project";
 import useData from "../../../hooks/useData";
 import ProjectCard from "./ProjectCard";
+import useFilterStore from "../../../stores/filterStore";
 
 const ProjectsGrid = () => {
   const { data } = useData<Project>(projects);
+  const currParams = useFilterStore((s) => s.currParams);
 
   return (
     <>
@@ -17,11 +19,18 @@ const ProjectsGrid = () => {
         spacing={6}
         margin={1}
       >
-        {data.map((project) => (
-          <GridItem key={project.slug}>
-            <ProjectCard project={project} />
-          </GridItem>
-        ))}
+        {data.map(
+          (project) =>
+            (currParams.length === 0 ||
+              project.skills?.reduce(
+                (acc, state) => acc || currParams.includes(state),
+                false
+              )) && (
+              <GridItem key={project.slug}>
+                <ProjectCard project={project} />
+              </GridItem>
+            )
+        )}
       </SimpleGrid>
     </>
   );

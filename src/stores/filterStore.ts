@@ -1,19 +1,26 @@
 import { create } from "zustand";
 import { mountStoreDevtool } from "simple-zustand-devtools";
+import { SkillName } from "../entities/Skill";
 
-interface AuthStore {
-  user: string;
-  login: (username: string) => void;
-  logout: () => void;
+interface FilterStore {
+  currParams: SkillName[];
+  addParam: (param: SkillName) => void;
+  removeParam: (param: SkillName) => void;
+  resetParams: () => void;
 }
 
-const useAuthStore = create<AuthStore>((set) => ({
-  user: "",
-  login: (username) => set(() => ({ user: username })),
-  logout: () => set(() => ({ user: "" })),
+const useFilterStore = create<FilterStore>((set) => ({
+  currParams: [],
+  addParam: (param: SkillName) =>
+    set((state) => ({ currParams: [...state.currParams, param] })),
+  removeParam: (param: SkillName) =>
+    set((state) => ({
+      currParams: state.currParams.filter((p) => p !== param),
+    })),
+  resetParams: () => set(() => ({ currParams: [] })),
 }));
 
 if (process.env.NODE_ENV === "development")
-  mountStoreDevtool("Auth Store", useAuthStore);
+  mountStoreDevtool("Filter Store", useFilterStore);
 
-export default useAuthStore;
+export default useFilterStore;

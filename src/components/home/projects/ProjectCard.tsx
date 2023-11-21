@@ -16,12 +16,15 @@ import { PLACEHOLDER_IMAGE } from "../../../constants/settings";
 import useDataPoint from "../../../hooks/useDataPoint";
 import skills from "../../../data/skills";
 import Skill from "../../../entities/Skill";
+import useFilterStore from "../../../stores/filterStore";
 
 interface Props {
   project: Project;
 }
 
 const ProjectCard = ({ project }: Props) => {
+  const { currParams, addParam, removeParam } = useFilterStore();
+
   return (
     <LinkBox
       key={project.slug}
@@ -55,7 +58,13 @@ const ProjectCard = ({ project }: Props) => {
         <Text>{project.shortDescription}</Text>
         <HStack marginY={2}>
           {project.skills?.map((s) => (
-            <Button colorScheme="gray" size={"sm"}>
+            <Button
+              colorScheme={currParams.includes(s) ? "blue" : "gray"}
+              onClick={() =>
+                currParams.includes(s) ? removeParam(s) : addParam(s)
+              }
+              size={"sm"}
+            >
               {useDataPoint<Skill>(skills, s)?.title}
             </Button>
           ))}

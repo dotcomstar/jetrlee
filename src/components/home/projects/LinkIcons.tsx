@@ -1,5 +1,5 @@
 import { HStack } from "@chakra-ui/react";
-import URLButton from "../URLButton";
+import URLButton from "../../URLButton";
 
 interface LinkIconProps {
   docs?: string;

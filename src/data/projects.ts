@@ -13,6 +13,7 @@ const projects: Project[] = [
     startDate: "2023",
     endDate: "2023",
     isCurrent: true,
+    skills: ["react", "typescript"],
   },
   {
     name: "ScheduleTerp Website",
@@ -26,6 +27,7 @@ const projects: Project[] = [
     startDate: "2023",
     endDate: "2023",
     isCurrent: false,
+    skills: ["react", "typescript", "aws", "python"],
   },
   {
     name: "GameHub Website",
@@ -38,6 +40,7 @@ const projects: Project[] = [
     startDate: "2023",
     endDate: "2023",
     isCurrent: false,
+    skills: ["react", "typescript"],
   },
   {
     name: "Formula E Dashboard",
@@ -49,6 +52,7 @@ const projects: Project[] = [
     startDate: "2022",
     endDate: "2022",
     isCurrent: false,
+    skills: ["soldering"],
   },
   {
     name: "Botball Robotics",
@@ -63,6 +67,7 @@ const projects: Project[] = [
     startDate: "2015",
     endDate: "2018",
     isCurrent: false,
+    skills: ["python"],
   },
   {
     name: "CS:GO Defuse CodePen",

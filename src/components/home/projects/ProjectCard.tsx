@@ -9,9 +9,9 @@ import {
   AspectRatio,
   HStack,
 } from "@chakra-ui/react";
-import Project from "../../entities/Project";
+import Project from "../../../entities/Project";
 import LinkIcons from "./LinkIcons";
-import { PLACEHOLDER_IMAGE } from "../../constants/settings";
+import { PLACEHOLDER_IMAGE } from "../../../constants/settings";
 
 interface Props {
   project: Project;

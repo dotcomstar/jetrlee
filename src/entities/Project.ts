@@ -1,3 +1,5 @@
+import { SkillName } from "./Skill";
+
 export default interface Project {
   name: string;
   description: string;
@@ -9,4 +11,5 @@ export default interface Project {
   startDate: string;
   endDate: string;
   isCurrent: boolean;
+  skills?: SkillName[];
 }

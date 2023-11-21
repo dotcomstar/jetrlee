@@ -1,7 +1,15 @@
+export type SkillName =
+  | "python"
+  | "typescript"
+  | "react"
+  | "aws"
+  | "soldering"
+  | "spanish";
+
 export default interface Skill {
-  category: "software" | "hardware" | "language";
+  category?: "software" | "hardware" | "language";
   type?: string;
   title: string;
-  slug: string;
-  proficiency: "learning" | "proficient";
+  slug: SkillName;
+  proficiency?: "learning" | "proficient";
 }

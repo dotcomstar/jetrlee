@@ -8,7 +8,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
-import LinkIcons from "../components/projects/LinkIcons";
+import LinkIcons from "../components/home/projects/LinkIcons";
 // import NavigationButtons from "../components/NavigationButtons";
 import projects from "../data/projects";
 import Project from "../entities/Project";

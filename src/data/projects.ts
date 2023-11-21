@@ -2,7 +2,7 @@ import Project from "../entities/Project";
 
 const projects: Project[] = [
   {
-    name: "Triviale",
+    name: "Trivialle",
     description:
       "A wordle-like game for trivia questions. Answer 3 new questions every day!",
     shortDescription: "A daily trivia puzzle game",

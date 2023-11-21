@@ -1,4 +1,5 @@
 import {
+  Button,
   GridItem,
   HStack,
   Heading,
@@ -13,6 +14,9 @@ import LinkIcons from "../components/home/projects/LinkIcons";
 import projects from "../data/projects";
 import Project from "../entities/Project";
 import useDataPoint from "../hooks/useDataPoint";
+import Skill from "../entities/Skill";
+import skills from "../data/skills";
+import DefinitionItem from "./DefinitionItem";
 // import useIndex from "../hooks/useIndex";
 
 const ProjectDetailsPage = () => {
@@ -36,6 +40,15 @@ const ProjectDetailsPage = () => {
           <LinkIcons docs={project.docs} url={project.url} />
         </HStack>
         <Text>{project.description}</Text>
+        <DefinitionItem term="Skills">
+          <HStack>
+            {project.skills?.map((s) => (
+              <Button size={"sm"} color="gray.650">
+                {useDataPoint<Skill>(skills, s)?.title}
+              </Button>
+            ))}
+          </HStack>
+        </DefinitionItem>
       </GridItem>
       <GridItem>
         <Link isExternal href={project.url}>

@@ -13,6 +13,9 @@ import {
 import Project from "../../../entities/Project";
 import LinkIcons from "./LinkIcons";
 import { PLACEHOLDER_IMAGE } from "../../../constants/settings";
+import useDataPoint from "../../../hooks/useDataPoint";
+import skills from "../../../data/skills";
+import Skill from "../../../entities/Skill";
 
 interface Props {
   project: Project;
@@ -50,10 +53,10 @@ const ProjectCard = ({ project }: Props) => {
           <LinkIcons docs={project.docs} url={project.url} size="25px" />
         </HStack>
         <Text>{project.shortDescription}</Text>
-        <HStack>
+        <HStack marginY={2}>
           {project.skills?.map((s) => (
-            <Button colorScheme="yellow" size={"sm"}>
-              {s}
+            <Button colorScheme="gray" size={"sm"}>
+              {useDataPoint<Skill>(skills, s)?.title}
             </Button>
           ))}
         </HStack>

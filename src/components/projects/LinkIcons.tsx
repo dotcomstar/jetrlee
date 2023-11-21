@@ -1,5 +1,5 @@
-import { HStack, Icon, Link } from "@chakra-ui/react";
-import { FaGithub, FaGlobe } from "react-icons/fa";
+import { HStack } from "@chakra-ui/react";
+import URLButton from "../URLButton";
 
 interface LinkIconProps {
   docs?: string;
@@ -11,20 +11,16 @@ const LinkIcons = ({ docs, url, size = "30px" }: LinkIconProps) => {
   return (
     <HStack>
       {docs && (
-        <Link href={docs} key={docs} isExternal target="_blank" rel="noopener">
-          <Icon as={FaGithub} boxSize={size} color={"black.500"} />
-        </Link>
+        <URLButton
+          url={docs}
+          isDoc
+          boxSize={size}
+          color="black.500"
+          key={docs}
+        />
       )}
       {url && (
-        <Link
-          isExternal
-          href={url}
-          key={url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Icon as={FaGlobe} boxSize={size} color={"black.500"} />
-        </Link>
+        <URLButton url={url} boxSize={size} color="black.500" key={url} />
       )}
     </HStack>
   );

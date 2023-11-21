@@ -56,19 +56,19 @@ const ProjectCard = ({ project }: Props) => {
           <LinkIcons docs={project.docs} url={project.url} size="25px" />
         </HStack>
         <Text>{project.shortDescription}</Text>
-        <HStack marginY={2}>
-          {project.skills?.map((s) => (
-            <Button
-              colorScheme={currParams.includes(s) ? "blue" : "gray"}
-              onClick={() =>
-                currParams.includes(s) ? removeParam(s) : addParam(s)
-              }
-              size={"sm"}
-            >
-              {useDataPoint<Skill>(skills, s)?.title}
-            </Button>
-          ))}
-        </HStack>
+        {project.skills?.map((s) => (
+          <Button
+            colorScheme={currParams.includes(s) ? "blue" : "gray"}
+            onClick={() =>
+              currParams.includes(s) ? removeParam(s) : addParam(s)
+            }
+            size={"sm"}
+            marginRight={2}
+            marginBottom={1}
+          >
+            {useDataPoint<Skill>(skills, s)?.title}
+          </Button>
+        ))}
       </CardBody>
     </LinkBox>
   );

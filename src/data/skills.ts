@@ -41,6 +41,13 @@ const skills: Skill[] = [
     slug: "spanish",
     proficiency: "proficient",
   },
+  {
+    category: "software",
+    type: "language",
+    title: "JavaScript",
+    slug: "javascript",
+    proficiency: "learning",
+  },
 ];
 
 export default skills;

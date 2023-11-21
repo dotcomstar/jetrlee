@@ -8,6 +8,7 @@ import {
   Image,
   AspectRatio,
   HStack,
+  Button,
 } from "@chakra-ui/react";
 import Project from "../../../entities/Project";
 import LinkIcons from "./LinkIcons";
@@ -49,6 +50,13 @@ const ProjectCard = ({ project }: Props) => {
           <LinkIcons docs={project.docs} url={project.url} size="25px" />
         </HStack>
         <Text>{project.shortDescription}</Text>
+        <HStack>
+          {project.skills?.map((s) => (
+            <Button colorScheme="yellow" size={"sm"}>
+              {s}
+            </Button>
+          ))}
+        </HStack>
       </CardBody>
     </LinkBox>
   );

@@ -4,7 +4,8 @@ export type SkillName =
   | "react"
   | "aws"
   | "soldering"
-  | "spanish";
+  | "spanish"
+  | "javascript";
 
 export default interface Skill {
   category?: "software" | "hardware" | "language";

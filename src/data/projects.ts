@@ -80,6 +80,7 @@ const projects: Project[] = [
     startDate: "2023",
     endDate: "2023",
     isCurrent: false,
+    skills: ["javascript"],
   },
 ];
 

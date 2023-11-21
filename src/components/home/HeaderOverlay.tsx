@@ -1,9 +1,11 @@
 import { Box, Center, Container, useMediaQuery } from "@chakra-ui/react";
-import jetPlanefield from "../assets/jet-planefield.jpg";
 import CloudTextDynamic from "./CloudTextDynamic";
+import {
+  BACKGROUND_IMAGE,
+  BACKGROUND_IMAGE_POSITION,
+} from "../../constants/settings";
 
 const HeaderOverlay = () => {
-  // single media query with no options
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
 
   return (
@@ -11,9 +13,11 @@ const HeaderOverlay = () => {
       <Box
         minHeight="800px"
         position="relative"
-        bgImage={jetPlanefield}
+        bgImage={BACKGROUND_IMAGE}
+        backgroundColor="rgba(23, 
+          50, 87, 0.4)"
         bgSize="cover"
-        bgPosition="bottom right"
+        bgPosition={BACKGROUND_IMAGE_POSITION}
         bgRepeat="no-repeat"
         left={0}
         right={0}

@@ -1,6 +1,7 @@
 import { Grid, GridItem } from "@chakra-ui/react";
-import HeaderOverlay from "../components/HeaderOverlay";
-import ProjectsPage from "../components/ProjectsGrid";
+import HeaderOverlay from "../components/home/HeaderOverlay";
+import ProjectsGrid from "../components/home/projects/ProjectsGrid";
+import SkillStack from "../components/home/skills/SkillStack";
 
 const HomePage = () => {
   return (
@@ -9,7 +10,10 @@ const HomePage = () => {
         <HeaderOverlay />
       </GridItem>
       <GridItem px={5} pt={5}>
-        <ProjectsPage />
+        <SkillStack />
+      </GridItem>
+      <GridItem px={5} pt={5}>
+        <ProjectsGrid />
       </GridItem>
     </Grid>
   );

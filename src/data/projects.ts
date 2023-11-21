@@ -1,6 +1,8 @@
-export default [
+import Project from "../entities/Project";
+
+const projects: Project[] = [
   {
-    name: "Triviale",
+    name: "Trivialle",
     description:
       "A wordle-like game for trivia questions. Answer 3 new questions every day!",
     shortDescription: "A daily trivia puzzle game",
@@ -11,6 +13,7 @@ export default [
     startDate: "2023",
     endDate: "2023",
     isCurrent: true,
+    skills: ["react", "typescript"],
   },
   {
     name: "ScheduleTerp Website",
@@ -24,6 +27,7 @@ export default [
     startDate: "2023",
     endDate: "2023",
     isCurrent: false,
+    skills: ["react", "typescript", "aws", "python"],
   },
   {
     name: "GameHub Website",
@@ -36,6 +40,7 @@ export default [
     startDate: "2023",
     endDate: "2023",
     isCurrent: false,
+    skills: ["react", "typescript"],
   },
   {
     name: "Formula E Dashboard",
@@ -47,6 +52,7 @@ export default [
     startDate: "2022",
     endDate: "2022",
     isCurrent: false,
+    skills: ["soldering"],
   },
   {
     name: "Botball Robotics",
@@ -61,6 +67,7 @@ export default [
     startDate: "2015",
     endDate: "2018",
     isCurrent: false,
+    skills: ["python"],
   },
   {
     name: "CS:GO Defuse CodePen",
@@ -73,5 +80,8 @@ export default [
     startDate: "2023",
     endDate: "2023",
     isCurrent: false,
+    skills: ["javascript"],
   },
 ];
+
+export default projects;

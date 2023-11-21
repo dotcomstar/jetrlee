@@ -1,4 +1,6 @@
-export default [
+import Skill from "../entities/Skill";
+
+const skills: Skill[] = [
   {
     category: "software",
     type: "language",
@@ -39,4 +41,13 @@ export default [
     slug: "spanish",
     proficiency: "proficient",
   },
+  {
+    category: "software",
+    type: "language",
+    title: "JavaScript",
+    slug: "javascript",
+    proficiency: "learning",
+  },
 ];
+
+export default skills;

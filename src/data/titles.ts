@@ -1,4 +1,4 @@
-export default [
+const titles: String[] = [
   "React Developer",
   "Python Developer",
   "Computer Engineer",
@@ -7,3 +7,5 @@ export default [
   "Gamer",
   "Fencer",
 ];
+
+export default titles;

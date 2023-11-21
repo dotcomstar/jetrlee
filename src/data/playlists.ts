@@ -1,4 +1,6 @@
-export default [
+import Playlist from "../entities/Playlist";
+
+const playlists: Playlist[] = [
   {
     title: "Jet's Jam",
     url: "https://open.spotify.com/playlist/6WlXWNfWVq8oipr2jJsqsi?si=1a4d756caba44fd2",
@@ -30,3 +32,5 @@ export default [
     slug: "947freshfm",
   },
 ];
+
+export default playlists;

@@ -1,4 +1,6 @@
-export default [
+import Project from "../entities/Project";
+
+const projects: Project[] = [
   {
     name: "Triviale",
     description:
@@ -75,3 +77,5 @@ export default [
     isCurrent: false,
   },
 ];
+
+export default projects;

@@ -1,6 +1,6 @@
 import { Grid, GridItem } from "@chakra-ui/react";
-import HeaderOverlay from "../components/HeaderOverlay";
-import ProjectsPage from "../components/ProjectsGrid";
+import HeaderOverlay from "../components/home/HeaderOverlay";
+import ProjectsPage from "../components/projects/ProjectsGrid";
 
 const HomePage = () => {
   return (

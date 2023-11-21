@@ -1,4 +1,6 @@
-export default [
+import Social from "../entities/Social";
+
+const socials: Social[] = [
   { name: "GitHub", slug: "github", url: "https://github.com/dotcomstar" },
   {
     name: "LinkedIn",
@@ -7,3 +9,5 @@ export default [
   },
   { name: "Email", slug: "email", url: "mailto:jetrlee@gmail.com" },
 ];
+
+export default socials;

@@ -9,9 +9,9 @@ import {
   AspectRatio,
   HStack,
 } from "@chakra-ui/react";
-import Project from "../entities/Project";
-import noImage from "../assets//no-image-placeholder-6f3882e0.webp";
+import Project from "../../entities/Project";
 import LinkIcons from "./LinkIcons";
+import { PLACEHOLDER_IMAGE } from "../../constants/settings";
 
 interface Props {
   project: Project;
@@ -34,7 +34,7 @@ const ProjectCard = ({ project }: Props) => {
           src={project.image}
           onError={({ currentTarget }) => {
             currentTarget.onerror = null; // prevents looping
-            currentTarget.src = noImage;
+            currentTarget.src = PLACEHOLDER_IMAGE;
           }}
           alt={project.name}
           objectFit="cover"

@@ -1,8 +1,8 @@
 import { GridItem, Heading, SimpleGrid } from "@chakra-ui/react";
+import projects from "../../data/projects";
+import Project from "../../entities/Project";
+import useData from "../../hooks/useData";
 import ProjectCard from "./ProjectCard";
-import projects from "../data/projects";
-import Project from "../entities/Project";
-import useData from "../hooks/useData";
 
 const ProjectsGrid = () => {
   const { data } = useData<Project>(projects);

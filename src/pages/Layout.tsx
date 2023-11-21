@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { Box } from "@chakra-ui/react";
-import NavBar, { navBarHeight } from "../components/NavBar";
+import NavBar, { navBarHeight } from "../components/navbar/NavBar";
 import SocialsIcons from "../components/SocialsIcons";
 
 interface LayoutProps {

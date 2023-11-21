@@ -1,4 +1,4 @@
-export default interface Technology {
+export default interface Skill {
   category: "software" | "hardware" | "language";
   type?: string;
   title: string;

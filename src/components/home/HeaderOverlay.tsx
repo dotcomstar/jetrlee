@@ -7,6 +7,7 @@ import {
 
 const HeaderOverlay = () => {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isLargerThan1500] = useMediaQuery("(min-width: 1500px)");
 
   return (
     <Container maxW="100vw" p={0}>
@@ -31,7 +32,7 @@ const HeaderOverlay = () => {
           pl={3}
           mt={isLargerThan800 ? "10vh" : "-10"}
         >
-          <CloudTextDynamic />
+          {!isLargerThan1500 && <CloudTextDynamic />}
         </Center>
       </Box>
     </Container>

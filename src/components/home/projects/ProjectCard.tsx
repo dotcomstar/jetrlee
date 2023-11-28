@@ -36,7 +36,7 @@ const ProjectCard = ({ project }: Props) => {
       as={Card}
       overflow="hidden"
     >
-      <AspectRatio maxW="400px" ratio={16 / 9}>
+      <AspectRatio ratio={16 / 9}>
         <Image
           src={project.image}
           onError={({ currentTarget }) => {

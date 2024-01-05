@@ -2,16 +2,16 @@ import Project from "../entities/Project";
 
 const projects: Project[] = [
   {
-    name: "Trivialle",
+    name: "Triviale",
     description:
       "A wordle-like game for trivia questions. Answer 3 new questions every day!",
     shortDescription: "A daily trivia puzzle game",
     image: "/Triviale.png",
     slug: "triviale",
-    url: "https://trivialle.vercel.app/",
+    url: "https://www.triviale.net/",
     docs: "https://github.com/dotcomstar/Triviale",
     startDate: "2023",
-    endDate: "2023",
+    endDate: "2024",
     isCurrent: true,
     skills: ["react", "typescript"],
   },

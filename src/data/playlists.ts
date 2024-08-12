@@ -9,12 +9,12 @@ const playlists: Playlist[] = [
     slug: "jetsjam",
   },
   {
-    title: "Jet's 2023",
-    url: "https://open.spotify.com/playlist/7tAMTtDV9Guvt7xEL0sRUU?si=052cabc2446a454c",
-    description: "Yearly playlist for 2023",
+    title: "Jet's 2024",
+    url: "https://open.spotify.com/playlist/7Dkx62U9VcCz0S7vDsbZby?si=d1782408b38b4756",
+    description: "Yearly playlist for 2024",
     genre: "mixed",
     isMostRecent: true,
-    slug: "jets2023",
+    slug: "jets2024",
   },
   {
     title: "Jet's Electroswing",

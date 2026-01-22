@@ -9,12 +9,12 @@ const playlists: Playlist[] = [
     slug: "jetsjam",
   },
   {
-    title: "Jet's 2024",
-    url: "https://open.spotify.com/playlist/7Dkx62U9VcCz0S7vDsbZby?si=d1782408b38b4756",
-    description: "Yearly playlist for 2024",
+    title: "Jet's 2026",
+    url: "https://music.apple.com/us/playlist/jets-2026/pl.u-AkAmPl3clP04bN",
+    description: "Yearly playlist for 2026",
     genre: "mixed",
     isMostRecent: true,
-    slug: "jets2024",
+    slug: "jets2026",
   },
   {
     title: "Jet's Electroswing",
